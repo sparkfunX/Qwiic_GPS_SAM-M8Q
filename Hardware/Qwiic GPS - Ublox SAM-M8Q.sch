@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.1">
+<eagle version="9.2.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -9299,24 +9299,39 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LED-BLUE" prefix="D" uservalue="yes">
-<description>&lt;h3&gt;Blue SMD LED&lt;/h3&gt;
-&lt;p&gt;Used in manufacturing of various products at SparkFun&lt;/p&gt;
+<deviceset name="LED-YELLOW" prefix="D" uservalue="yes">
+<description>&lt;h3&gt;Yellow SMD LED&lt;/h3&gt;
 
+Used in manufacturing several products at SparkFun. 
 
 &lt;p&gt;&lt;b&gt;Packages:&lt;/b&gt;
-&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href="http://www.digikey.com/product-detail/en/SMLE12BC7TT86/511-1589-2-ND/1641808"&gt;[Product Link]&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;1206&lt;/b&gt; - SMD1206  package &lt;a href="http://www.digikey.com/product-detail/en/lite-on-inc/LTST-C150TBKT/160-1643-1-ND/573584"&gt;[Product Link]&lt;/li&gt;
-&lt;ul&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;b&gt; 0603&lt;/b&gt; -  SMD 0603  package&lt;a href=http://www.kingbrightusa.com/product.asp?catalog_name=LED&amp;product_id=APT1608SYCK"&gt;[Product Link]&lt;/li&gt;
+&lt;li&gt;&lt;b&gt; 0603 -SMART&lt;/b&gt; - SMART SMD 0603  package (more efficient/more expensive) &lt;a href="http://www.osram-os.com/osram_os/en/products/product-catalog/led-light-emitting-diodes/smartled-0603/ly-l29k/index.jsp"&gt;[Product Link]&lt;/li&gt;
+&lt;li&gt;&lt;b&gt; LilyPad&lt;/b&gt; - SMD1206  package&lt;a href="https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150YUS4.pdf"&gt;[Product Datasheet]&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
 
 &lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13711”&gt;ESP8266 Thing-Dev Board&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/12757”&gt;RedBoard&lt;/a&gt;&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13794”&gt;Blynk Board&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13613”&gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13225”&gt;XBee Explorer Serial&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;</description>
 <gates>
-<gate name="G$1" symbol="LED" x="0" y="2.54"/>
+<gate name="G$1" symbol="LED" x="0" y="0"/>
 </gates>
 <devices>
+<device name="LILYPAD" package="LED-1206">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="DIO-09909"/>
+<attribute name="VALUE" value="Yellow" constant="no"/>
+</technology>
+</technologies>
+</device>
 <device name="0603" package="LED-0603">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
@@ -9324,20 +9339,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="DIO-08575"/>
-<attribute name="VALUE" value="BLUE"/>
+<attribute name="PROD_ID" value="DIO-09003"/>
+<attribute name="VALUE" value="Yellow" constant="no"/>
 </technology>
 </technologies>
 </device>
-<device name="1206" package="LED-1206">
+<device name="0603-SMART" package="LED-0603">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="DIO-09911"/>
-<attribute name="VALUE" value="BLUE" constant="no"/>
+<attribute name="PROD_ID" value="DIO-11230" constant="no"/>
+<attribute name="VALUE" value="Yellow" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -9348,7 +9363,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="DIO-09911" constant="no"/>
+<attribute name="PROD_ID" value="DIO-09909" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -10305,12 +10320,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP5" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" value=""/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="D1" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
+<part name="D1" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Yellow"/>
 <part name="JP1" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" value=""/>
 <part name="D2" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-PMEG4005EJ" value="0.5A/40V/420mV"/>
 <part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="R5" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
-<part name="R11" library="SparkFun-Resistors" deviceset="470OHM" device="-0603-1/10W-1%" value="470"/>
+<part name="R11" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
 <part name="JP7" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="JP8" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="U2" library="SAM-M8Q" deviceset="SAM-M8Q" device=""/>
@@ -10329,7 +10344,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheet>
 <plain>
 <text x="237.744" y="7.366" size="2.54" layer="94">V10</text>
-<text x="152.4" y="88.9" size="1.778" layer="97" align="center">7-bit unshifted I2C address: 0x10</text>
+<text x="157.48" y="96.52" size="1.778" layer="97" align="center">7-bit unshifted I2C address: 0x10</text>
 <text x="153.162" y="165.862" size="2.54" layer="94" ratio="15" rot="MR180" align="center">Ublox SAM-M8Q</text>
 <text x="31.242" y="165.862" size="2.54" layer="94" ratio="15" rot="MR180" align="center">RTC Backup</text>
 <text x="31.242" y="71.882" size="2.54" layer="94" ratio="15" rot="MR180" align="center">Pulse Per Second LED</text>
@@ -10339,34 +10354,59 @@ You are welcome to use this library for commercial purposes. For attribution, we
 I2C pullups from bus</text>
 <text x="20.32" y="60.96" size="1.778" layer="97">Cut JP1 to 
 disable PPS LED</text>
-<text x="220.98" y="170.18" size="1.27" layer="91">Add power LED</text>
 </plain>
 <instances>
-<instance part="JP3" gate="G$1" x="246.38" y="30.48"/>
-<instance part="JP4" gate="G$1" x="246.38" y="27.94"/>
-<instance part="JP2" gate="G$1" x="233.68" y="30.48" rot="R270"/>
-<instance part="JP6" gate="G$1" x="236.22" y="30.48"/>
-<instance part="SUPPLY4" gate="G$1" x="93.98" y="68.58"/>
+<instance part="JP3" gate="G$1" x="246.38" y="30.48" smashed="yes"/>
+<instance part="JP4" gate="G$1" x="246.38" y="27.94" smashed="yes"/>
+<instance part="JP2" gate="G$1" x="233.68" y="30.48" smashed="yes" rot="R270"/>
+<instance part="JP6" gate="G$1" x="236.22" y="30.48" smashed="yes"/>
+<instance part="SUPPLY4" gate="G$1" x="93.98" y="68.58" smashed="yes">
+<attribute name="VALUE" x="93.98" y="71.374" size="1.778" layer="96" align="bottom-center"/>
+</instance>
 <instance part="J2" gate="G$1" x="104.14" y="60.96" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="112.014" y="76.2" size="1.778" layer="96" font="vector" rot="MR270" align="top-left"/>
 <attribute name="NAME" x="109.22" y="68.834" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
-<instance part="GND6" gate="1" x="93.98" y="53.34"/>
-<instance part="SUPPLY7" gate="G$1" x="127" y="68.58"/>
-<instance part="J3" gate="G$1" x="137.16" y="60.96" rot="MR0"/>
-<instance part="GND7" gate="1" x="127" y="53.34"/>
-<instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="V" x="147.32" y="0"/>
-<instance part="SUPPLY8" gate="G$1" x="93.98" y="40.64"/>
+<instance part="GND6" gate="1" x="93.98" y="53.34" smashed="yes">
+<attribute name="VALUE" x="91.44" y="50.8" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY7" gate="G$1" x="127" y="68.58" smashed="yes">
+<attribute name="VALUE" x="127" y="71.374" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="J3" gate="G$1" x="137.16" y="60.96" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="142.24" y="55.626" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
+<attribute name="NAME" x="142.24" y="68.834" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="GND7" gate="1" x="127" y="53.34" smashed="yes">
+<attribute name="VALUE" x="124.46" y="50.8" size="1.778" layer="96"/>
+</instance>
+<instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
+<instance part="FRAME1" gate="V" x="147.32" y="0" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="160.02" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="233.68" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="162.814" y="17.78" size="2.7432" layer="94" font="vector"/>
+</instance>
+<instance part="SUPPLY8" gate="G$1" x="93.98" y="40.64" smashed="yes">
+<attribute name="VALUE" x="93.98" y="43.434" size="1.778" layer="96" align="bottom-center"/>
+</instance>
 <instance part="J4" gate="G$1" x="104.14" y="33.02" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="112.014" y="48.26" size="1.778" layer="96" font="vector" rot="MR270" align="top-left"/>
 <attribute name="NAME" x="109.22" y="40.894" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
-<instance part="GND8" gate="1" x="93.98" y="25.4"/>
-<instance part="LOGO1" gate="G$1" x="234.696" y="48.514"/>
-<instance part="C2" gate="G$1" x="121.92" y="124.46"/>
-<instance part="GND2" gate="1" x="121.92" y="116.84"/>
-<instance part="GND3" gate="1" x="142.24" y="106.68"/>
+<instance part="GND8" gate="1" x="93.98" y="25.4" smashed="yes">
+<attribute name="VALUE" x="91.44" y="22.86" size="1.778" layer="96"/>
+</instance>
+<instance part="LOGO1" gate="G$1" x="234.696" y="48.514" smashed="yes"/>
+<instance part="C2" gate="G$1" x="121.92" y="124.46" smashed="yes">
+<attribute name="NAME" x="123.444" y="127.381" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="123.444" y="122.301" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="GND2" gate="1" x="121.92" y="116.84" smashed="yes">
+<attribute name="VALUE" x="121.92" y="116.586" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND3" gate="1" x="142.24" y="106.68" smashed="yes">
+<attribute name="VALUE" x="142.24" y="106.426" size="1.778" layer="96" align="top-center"/>
+</instance>
 <instance part="R3" gate="G$1" x="177.8" y="121.92" smashed="yes">
 <attribute name="NAME" x="173.482" y="122.174" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="182.372" y="122.174" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
@@ -10375,37 +10415,70 @@ disable PPS LED</text>
 <attribute name="NAME" x="173.482" y="117.348" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="182.626" y="117.348" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
 </instance>
-<instance part="C3" gate="G$1" x="38.1" y="121.92" rot="MR0"/>
+<instance part="C3" gate="G$1" x="38.1" y="121.92" smashed="yes" rot="MR0">
+<attribute name="NAME" x="36.576" y="124.841" size="1.778" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="36.576" y="119.761" size="1.778" layer="96" font="vector" rot="MR0"/>
+</instance>
 <instance part="B1" gate="G$1" x="22.86" y="121.92" smashed="yes" rot="R270">
 <attribute name="NAME" x="25.4" y="124.206" size="1.778" layer="95" font="vector" rot="MR0" align="bottom-center"/>
 <attribute name="VALUE" x="18.542" y="121.92" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
 </instance>
-<instance part="GND5" gate="1" x="22.86" y="111.76"/>
-<instance part="GND10" gate="1" x="38.1" y="111.76"/>
-<instance part="SUPPLY6" gate="G$1" x="121.92" y="132.08" rot="MR0"/>
-<instance part="R7" gate="G$1" x="187.96" y="137.16" rot="R90"/>
-<instance part="R8" gate="G$1" x="203.2" y="137.16" rot="R90"/>
+<instance part="GND5" gate="1" x="22.86" y="111.76" smashed="yes">
+<attribute name="VALUE" x="22.86" y="111.506" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND10" gate="1" x="38.1" y="111.76" smashed="yes">
+<attribute name="VALUE" x="38.1" y="111.506" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY6" gate="G$1" x="121.92" y="132.08" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="121.92" y="134.874" size="1.778" layer="96" rot="MR0" align="bottom-center"/>
+</instance>
+<instance part="R7" gate="G$1" x="187.96" y="137.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="186.436" y="137.16" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="189.484" y="137.16" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
+<instance part="R8" gate="G$1" x="203.2" y="137.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="201.676" y="137.16" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="204.724" y="137.16" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
 <instance part="JP5" gate="G$1" x="195.58" y="144.78" smashed="yes" rot="R270">
 <attribute name="NAME" x="193.04" y="140.462" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="195.199" y="142.24" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
 </instance>
-<instance part="SUPPLY9" gate="G$1" x="195.58" y="152.4"/>
-<instance part="GND4" gate="1" x="22.86" y="25.4"/>
-<instance part="D1" gate="G$1" x="22.86" y="35.56"/>
-<instance part="JP1" gate="G$1" x="30.48" y="53.34"/>
+<instance part="SUPPLY9" gate="G$1" x="195.58" y="152.4" smashed="yes">
+<attribute name="VALUE" x="195.58" y="155.194" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="GND4" gate="1" x="22.86" y="25.4" smashed="yes">
+<attribute name="VALUE" x="22.86" y="25.146" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="D1" gate="G$1" x="22.86" y="35.56" smashed="yes">
+<attribute name="NAME" x="19.431" y="30.988" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="24.765" y="30.988" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+</instance>
+<instance part="JP1" gate="G$1" x="30.48" y="53.34" smashed="yes">
+<attribute name="NAME" x="27.94" y="55.88" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="27.94" y="50.8" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
 <instance part="D2" gate="G$1" x="22.86" y="147.32" smashed="yes" rot="R270">
 <attribute name="NAME" x="25.4" y="149.352" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="25.4" y="147.828" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="SUPPLY5" gate="G$1" x="22.86" y="152.4"/>
-<instance part="R5" gate="G$1" x="22.86" y="137.16" rot="R90"/>
+<instance part="SUPPLY5" gate="G$1" x="22.86" y="152.4" smashed="yes">
+<attribute name="VALUE" x="22.86" y="155.194" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="R5" gate="G$1" x="22.86" y="137.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.336" y="137.16" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="24.384" y="137.16" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+</instance>
 <instance part="R11" gate="G$1" x="22.86" y="45.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="26.162" y="45.212" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="28.702" y="44.958" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
 </instance>
-<instance part="JP7" gate="G$1" x="233.68" y="27.94" rot="R270"/>
-<instance part="JP8" gate="G$1" x="236.22" y="27.94" rot="R270"/>
-<instance part="U2" gate="U1" x="157.48" y="124.46"/>
+<instance part="JP7" gate="G$1" x="233.68" y="27.94" smashed="yes" rot="R270"/>
+<instance part="JP8" gate="G$1" x="236.22" y="27.94" smashed="yes" rot="R270"/>
+<instance part="U2" gate="U1" x="157.48" y="124.46" smashed="yes">
+<attribute name="NAME" x="147.32" y="140.208" size="1.778" layer="95"/>
+<attribute name="VALUE" x="147.32" y="106.68" size="1.778" layer="96"/>
+</instance>
 <instance part="R2" gate="G$1" x="177.8" y="129.54" smashed="yes">
 <attribute name="NAME" x="173.736" y="130.556" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="181.864" y="130.556" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
@@ -10414,16 +10487,26 @@ disable PPS LED</text>
 <attribute name="NAME" x="173.482" y="124.968" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="182.372" y="124.714" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="142.24" y="139.7" rot="MR0"/>
-<instance part="JP9" gate="G$1" x="243.84" y="30.48"/>
-<instance part="JP10" gate="G$1" x="243.84" y="27.94"/>
-<instance part="U$31" gate="G$1" x="203.2" y="45.72"/>
-<instance part="GND1" gate="1" x="165.1" y="45.72"/>
-<instance part="JP11" gate="G$1" x="157.48" y="55.88"/>
+<instance part="SUPPLY1" gate="G$1" x="142.24" y="139.7" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="142.24" y="142.494" size="1.778" layer="96" rot="MR0" align="bottom-center"/>
+</instance>
+<instance part="JP9" gate="G$1" x="243.84" y="30.48" smashed="yes"/>
+<instance part="JP10" gate="G$1" x="243.84" y="27.94" smashed="yes"/>
+<instance part="U$31" gate="G$1" x="203.2" y="45.72" smashed="yes"/>
+<instance part="GND1" gate="1" x="165.1" y="45.72" smashed="yes">
+<attribute name="VALUE" x="162.56" y="43.18" size="1.778" layer="96"/>
+</instance>
+<instance part="JP11" gate="G$1" x="157.48" y="55.88" smashed="yes">
+<attribute name="VALUE" x="152.4" y="45.72" size="1.778" layer="96"/>
+<attribute name="NAME" x="152.4" y="66.802" size="1.778" layer="95"/>
+</instance>
 <instance part="P+4" gate="G$1" x="165.1" y="66.04" smashed="yes">
 <attribute name="VALUE" x="162.814" y="69.596" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="134.62" y="35.56" rot="R180"/>
+<instance part="J1" gate="G$1" x="134.62" y="35.56" smashed="yes" rot="R180">
+<attribute name="VALUE" x="139.7" y="42.926" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="139.7" y="27.432" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
